@@ -1,0 +1,16 @@
+{
+  "manifestVersion": "2.2",
+  "contracts": {
+    "MyContract": "MyContract_v1",
+    "MyContract_v0": "MyContract_v0"
+  },
+  "dependencies": {},
+  "name": "shitcoin-project",
+  "version": "1.0.0",
+  "compiler": {
+    "manager": "truffle",
+    "compilerSettings": {
+      "optimizer": {}
+    }
+  }
+}

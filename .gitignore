@@ -67,3 +67,5 @@ artifacts
 # coverage/profiler report
 coverage
 
+
+.openzeppelin/.session

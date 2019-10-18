@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es2017",
+    "target": "es2015",
     "module": "commonjs",
     "strict": true,
     "moduleResolution": "node",
@@ -11,9 +11,9 @@
     "forceConsistentCasingInFileNames": true,
     "lib": ["es2015", "esnext.asynciterable"],
     "sourceMap": true,
-    "typeRoots": ["./node_modules/@types", "./types"],
+    "typeRoots": ["./node_modules/@types", "./types", "./@types"],
     "types": ["node", "truffle-contracts"]
   },
-  "include": ["**/*.ts"],
+  "include": ["**/*.ts", "scripts/deploy.js", "migrations/1_initial_migration.js"],
   "exclude": ["node_modules", "example", "build"]
 }
