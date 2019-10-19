@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es2015",
+    "target": "es2017",
     "module": "commonjs",
     "strict": true,
     "moduleResolution": "node",
@@ -9,11 +9,10 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "forceConsistentCasingInFileNames": true,
-    "lib": ["es2015", "esnext.asynciterable"],
     "sourceMap": true,
-    "typeRoots": ["./node_modules/@types", "./types", "./@types"],
-    "types": ["node", "truffle-contracts"]
+    "lib": ["es2015", "esnext.asynciterable"],
+    "typeRoots": ["./node_modules/@0x/typescript-typings/types", "./node_modules/@types", "./types"]
   },
-  "include": ["**/*.ts", "scripts/deploy.js", "migrations/1_initial_migration.js"],
+  "include": ["**/*.ts"],
   "exclude": ["node_modules", "example", "build"]
 }
