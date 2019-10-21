@@ -8,7 +8,8 @@
         "prepare": "yarn generate",
         "test": "truffle test && yarn tsc",
         "tsc": "tsc --noEmit",
-        "lint": "solhint -c .solhint.json contracts/**/*.sol"
+        "lint": "solhint -c .solhint.json contracts/**/*.sol",
+        "analyze":"npx truffle run verify"
     },
     "devDependencies": {
         "@types/mocha": "^5.2.5",
