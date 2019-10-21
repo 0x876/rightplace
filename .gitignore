@@ -5,8 +5,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-bin
-.env
+
 # Runtime data
 pids
 *.pid
@@ -71,3 +70,8 @@ coverage
 
 
 .openzeppelin/.session
+
+# project artifacts
+bin/*
+build/*
+artifacts/*
