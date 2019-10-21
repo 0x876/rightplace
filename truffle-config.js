@@ -25,8 +25,12 @@
 // const mnemonic = fs.readFileSync(".secret").toString().trim();
 
 require("ts-node/register");
+require('dotenv').config()
 
 module.exports = {
+
+  plugins: ["truffle-security"],
+
 
   test_file_extension_regexp: /.*\.ts$/,
   /**

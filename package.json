@@ -24,8 +24,10 @@
         "@openzeppelin/cli": "^2.5.3",
         "@openzeppelin/test-helpers": "^0.5.3",
         "@openzeppelin/upgrades": "^2.5.3",
+        "dotenv": "^8.2.0",
         "ethereum-types": "^2.1.6",
         "lodash": "^4.17.11",
-        "truffle": "^5.0.41"
+        "truffle": "^5.0.41",
+        "truffle-security": "^1.6.1"
     }
 }
