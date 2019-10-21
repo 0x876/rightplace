@@ -6,10 +6,10 @@
     "scripts": {
         "generate": "truffle compile && typechain --target truffle './build/**/*.json'",
         "prepare": "yarn generate",
-        "test": "truffle test && yarn tsc",
+        "test": "npx truffle test",
         "tsc": "tsc --noEmit",
         "lint": "solhint -c .solhint.json contracts/**/*.sol",
-        "analyze":"npx truffle run verify"
+        "analyze": "npx truffle run verify"
     },
     "devDependencies": {
         "@types/mocha": "^5.2.5",
@@ -22,6 +22,7 @@
         "typescript": "3.0.1"
     },
     "dependencies": {
+        "@0x/typescript-typings": "^4.3.0",
         "@openzeppelin/cli": "^2.5.3",
         "@openzeppelin/test-helpers": "^0.5.3",
         "@openzeppelin/upgrades": "^2.5.3",
