@@ -7,7 +7,7 @@ notifications:
 node_js:
   - '10.15.3'
 
-yascript:
+script:
   yarn global add solhint
   yarn lint
   yarn generate
@@ -17,4 +17,6 @@ yascript:
   yarn stop
 
 after_script:
+  - yarn ganache
   - yarn coverage && cat coverage/lcov.info | npx coveralls
+  - yarn stop
