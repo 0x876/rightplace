@@ -29,6 +29,18 @@ require('dotenv').config();
 
 const { toHex, toWei } = require("web3-utils");
 
+
+const mochaGasSettings = {
+  reporter: 'eth-gas-reporter',
+  reporterOptions : {
+    currency: 'USD',
+    gasPrice: 21
+  }
+}
+
+
+const mocha = process.env.GAS_REPORTER ? mochaGasSettings : {}
+
 module.exports = {
 
 
@@ -89,10 +101,7 @@ module.exports = {
     // }
   },
   // Set default mocha options here, use special reporters etc.
-  mocha: {
-    // timeout: 100000
-  },
-
+  mocha, 
   // Configure your compilers
   compilers: {
     solc: {

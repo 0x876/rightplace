@@ -45,10 +45,10 @@ else
   start_ganache
 fi
 
-yarn truffle version
+npx truffle version
 
 if [ "$MODE" = "coverage" ]; then
   npx truffle run coverage --solcoverjs .solcover.js
 else
-  npx truffle test "$@"
+  npx truffle test
 fi
