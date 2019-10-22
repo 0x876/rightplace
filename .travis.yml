@@ -7,6 +7,7 @@ notifications:
 node_js:
   - '10.15.3'
 script:
+  yarn global add solhint
   yarn lint
   yarn generate
   yarn ganache
