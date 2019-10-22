@@ -6,7 +6,10 @@ notifications:
   email: true
 node_js:
   - '10.15.3'
-env:
-  - TASK=lint
-  - TASK=test
-  - TASK=coverage
+script:
+  yarn lint
+  yarn generate
+  yarn ganache
+  sleep 5
+  yarn test
+  yarn stop
