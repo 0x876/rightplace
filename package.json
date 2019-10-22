@@ -29,6 +29,7 @@
         "@openzeppelin/cli": "^2.5.3",
         "@openzeppelin/test-helpers": "^0.5.3",
         "@openzeppelin/upgrades": "^2.5.3",
+        "coveralls": "^3.0.7",
         "dotenv": "^8.2.0",
         "eth-gas-reporter": "^0.2.12",
         "ethereum-types": "^2.1.6",
