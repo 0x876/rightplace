@@ -25,12 +25,14 @@
 // const mnemonic = fs.readFileSync(".secret").toString().trim();
 
 require("ts-node/register");
-require('dotenv').config()
+require('dotenv').config();
+
+const { toHex, toWei } = require("web3-utils");
 
 module.exports = {
 
-  plugins: ["truffle-security"],
 
+  plugins: ["truffle-security", "solidity-coverage"],
 
   test_file_extension_regexp: /.*\.ts$/,
   /**
@@ -51,11 +53,13 @@ module.exports = {
     // options below to some value.
     
     development: {
-      host: "127.0.0.1",     // Localhost (default: none)
-      port: 8545,            // Standard Ethereum port (default: none)
-      network_id: "*",       // Any network (default: none)
+      host: "127.0.0.1",
+      gas: "6000000",
+      gasPrice: toHex(toWei("1", "gwei")),
+      network_id: "*",
+      port: "8545",
+      skipDryRun: true,
     },
-
     // Another network with more advanced options...
     // advanced: {
       // port: 8777,             // Custom port
@@ -84,7 +88,6 @@ module.exports = {
       // production: true    // Treats this network as if it was a public net. (default: false)
     // }
   },
-
   // Set default mocha options here, use special reporters etc.
   mocha: {
     // timeout: 100000
@@ -93,15 +96,13 @@ module.exports = {
   // Configure your compilers
   compilers: {
     solc: {
-      // version: "0.5.1",    // Fetch exact version from solc-bin (default: truffle's version)
-      // docker: true,        // Use "0.5.1" you've installed locally with docker (default: false)
-      // settings: {          // See the solidity docs for advice about optimization and evmVersion
-      //  optimizer: {
-      //    enabled: false,
-      //    runs: 200
-      //  },
-      //  evmVersion: "byzantium"
-      // }
-    }
+      version: "0.5.12",
+      settings: {
+        optimizer: {
+          enabled: false,
+          runs: 200,
+        },
+      },
+    },
   }
 }

@@ -9,7 +9,6 @@ docs
 doc
 website
 images
-assets
 
 # examples
 example
@@ -39,7 +38,5 @@ wercker.yml
 .flowconfig
 .documentup.json
 .yarn-metadata.json
-.travis.yml
-
 # misc
 *.md
