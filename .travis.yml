@@ -16,7 +16,6 @@ install:
  
 notifications:
   email: true
-  slack: akropolisio:q9lFKpyTHVdsNQ8JD3sA6VQP
 
 node_js:
   - '10.15.3'
