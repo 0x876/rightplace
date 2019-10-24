@@ -1,10 +1,12 @@
 import { CounterInstance } from "../types/truffle-contracts/index";
 // tslint:disable-next-line:no-var-requires
 const { BN, constants, expectEvent, shouldFail } = require("@openzeppelin/test-helpers");
+
 // tslint:disable-next-line:no-var-requires
 const should = require("chai").should();
 
-const Counter = artifacts.require("Counter");
+// tslint:disable-next-line:variable-name
+const Counter_V0 = artifacts.require("Counter_V0");
 
 contract("counter", async ([_, owner, ...otherAccounts]) => {
   let counter: CounterInstance;
@@ -12,7 +14,7 @@ contract("counter", async ([_, owner, ...otherAccounts]) => {
   const add = new BN(1);
 
   beforeEach(async function() {
-    counter = await Counter.new();
+    counter = await Counter_V0.new();
     counter.initialize(value, { from: owner });
   });
 

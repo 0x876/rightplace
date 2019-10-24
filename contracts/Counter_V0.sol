@@ -2,7 +2,7 @@ pragma solidity 0.5.12;
 
 import "@openzeppelin/upgrades/contracts/Initializable.sol";
 
-contract Counter is Initializable {
+contract Counter_V0 is Initializable {
     //it keeps a count to demonstrate stage changes
     uint private count;
     address private _owner;
