@@ -1,4 +1,4 @@
-import { CounterInstance } from "../types/truffle-contracts/index";
+import { Counter_V0Instance } from "../types/truffle-contracts/index";
 // tslint:disable-next-line:no-var-requires
 const { BN, constants, expectEvent, shouldFail } = require("@openzeppelin/test-helpers");
 
@@ -9,7 +9,7 @@ const should = require("chai").should();
 const Counter_V0 = artifacts.require("Counter_V0");
 
 contract("counter", async ([_, owner, ...otherAccounts]) => {
-  let counter: CounterInstance;
+  let counter: Counter_V0Instance;
   const value = new BN(9999);
   const add = new BN(1);
 
